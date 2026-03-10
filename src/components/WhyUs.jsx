@@ -152,7 +152,7 @@ const WhyUs = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20event%20decoration%20with%20Chaitu%20Events!"
+                href="https://wa.me/919553638221?text=Hi%2C%20I%20want%20to%20book%20an%20event%20decoration%20with%20Chaitu%20Events!"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -163,7 +163,7 @@ const WhyUs = () => {
                 🚀 Get Free Quote
               </motion.a>
               <motion.a
-                href="tel:+919876543210"
+                href="tel:+919553638221"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-white border-2 border-white/30 hover:border-white transition-all duration-300"

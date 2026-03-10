@@ -11,6 +11,7 @@ const services = [
     desc: 'Create stunning birthday setups with premium balloon arches, columns, and theme-based arrangements that wow every guest.',
     color: 'from-pink-500 to-rose-600',
     border: 'border-pink-200 dark:border-pink-800',
+    hoverEffect: 'hover:border-pink-400 dark:hover:border-pink-500 hover:shadow-2xl hover:shadow-pink-500/30 dark:hover:shadow-pink-500/20',
     badge: 'Most Popular',
     details: ['Balloon arches & columns', 'Themed backdrops', 'Table centrepieces', 'Happy Birthday banners', 'Confetti & streamers'],
   },
@@ -21,6 +22,7 @@ const services = [
     desc: 'Elegant floral mandaps, stage decorations, and romantic lighting that create a dream wedding everyone will remember.',
     color: 'from-red-500 to-pink-600',
     border: 'border-red-200 dark:border-red-800',
+    hoverEffect: 'hover:border-red-400 dark:hover:border-red-500 hover:shadow-2xl hover:shadow-red-500/30 dark:hover:shadow-red-500/20',
     badge: 'Premium',
     details: ['Floral mandap setup', 'Stage decoration', 'Flower wall backdrop', 'Entry gate design', 'Table & chair draping'],
   },
@@ -31,6 +33,7 @@ const services = [
     desc: 'Romantic and elegant engagement setups with premium floral work, balloon backdrops, and personalized themes.',
     color: 'from-purple-500 to-violet-600',
     border: 'border-purple-200 dark:border-purple-800',
+    hoverEffect: 'hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/20',
     badge: 'Trending',
     details: ['Balloon & floral arch', 'Ring ceremony setup', 'Personalized backdrop', 'Fairy light canopy', 'Couple name signage'],
   },
@@ -41,6 +44,7 @@ const services = [
     desc: 'Welcome to your new home! Fresh flower decorations, colorful balloon arrangements, and festive lighting setups.',
     color: 'from-yellow-500 to-amber-600',
     border: 'border-yellow-200 dark:border-yellow-800',
+    hoverEffect: 'hover:border-yellow-400 dark:hover:border-yellow-500 hover:shadow-2xl hover:shadow-yellow-500/30 dark:hover:shadow-yellow-500/20',
     badge: '',
     details: ['Door torana decoration', 'Rangoli design', 'Marigold garlands', 'Festive balloon setup', 'Diya & lamp arrangement'],
   },
@@ -51,6 +55,7 @@ const services = [
     desc: 'Turn ordinary moments into extraordinary surprises with perfectly planned setups, hidden decorations, and dramatic reveals.',
     color: 'from-red-600 to-pink-700',
     border: 'border-red-200 dark:border-red-800',
+    hoverEffect: 'hover:border-rose-400 dark:hover:border-rose-500 hover:shadow-2xl hover:shadow-rose-500/30 dark:hover:shadow-rose-500/20',
     badge: 'Fan Favorite',
     details: ['Secret setup (you\'re away)', 'Balloon ceiling fill', 'Rose petal pathways', 'Custom photo wall', 'Surprise reveal kit'],
   },
@@ -61,6 +66,7 @@ const services = [
     desc: 'Fresh and artificial floral arrangements to add natural beauty and fragrance to any event or occasion.',
     color: 'from-rose-500 to-pink-600',
     border: 'border-rose-200 dark:border-rose-800',
+    hoverEffect: 'hover:border-rose-400 dark:hover:border-rose-500 hover:shadow-2xl hover:shadow-rose-500/30 dark:hover:shadow-rose-500/20',
     badge: '',
     details: ['Fresh flower arrangements', 'Flower wall panels', 'Aisle decoration', 'Centrepiece bouquets', 'Seasonal blooms'],
   },
@@ -71,6 +77,7 @@ const services = [
     desc: 'Fairy lights, LED setups, neon signs, and ambient lighting to create the perfect atmosphere for any event.',
     color: 'from-indigo-500 to-blue-600',
     border: 'border-indigo-200 dark:border-indigo-800',
+    hoverEffect: 'hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-2xl hover:shadow-indigo-500/30 dark:hover:shadow-indigo-500/20',
     badge: '',
     details: ['Fairy light canopy', 'LED strip lighting', 'Neon custom signs', 'Paper lanterns', 'Candle light setup'],
   },
@@ -81,6 +88,7 @@ const services = [
     desc: 'Candlelit dinners, rose petal arrangements, and dreamy balloon setups for anniversaries and romantic proposals.',
     color: 'from-green-500 to-teal-600',
     border: 'border-green-200 dark:border-green-800',
+    hoverEffect: 'hover:border-green-400 dark:hover:border-green-500 hover:shadow-2xl hover:shadow-green-500/30 dark:hover:shadow-green-500/20',
     badge: '',
     details: ['Rose petal "LOVE" spell', 'Candlelit dinner setup', 'Heart balloon arch', 'Wine & gift arrangement', 'Romantic lighting'],
   },
@@ -88,7 +96,6 @@ const services = [
 
 const ServiceCard = ({ service, index }) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [hovered, setHovered] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -97,9 +104,7 @@ const ServiceCard = ({ service, index }) => {
       initial={{ opacity: 0, y: 60 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.07, duration: 0.5, type: 'spring' }}
-      className={`relative rounded-3xl border ${service.border} bg-white dark:bg-gray-900 flex flex-col group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className={`relative rounded-3xl border ${service.border} bg-white dark:bg-gray-900 flex flex-col group cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-2 ${service.hoverEffect}`}
     >
       {/* Image */}
       <div className="relative h-52 overflow-hidden">
@@ -145,13 +150,6 @@ const ServiceCard = ({ service, index }) => {
         </motion.button>
       </div>
 
-      <AnimatePresence>
-        {hovered && (
-          <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }}
-            className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-5 pointer-events-none`}
-          />
-        )}
-      </AnimatePresence>
     </motion.div>
   );
 };

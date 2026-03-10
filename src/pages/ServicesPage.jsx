@@ -69,7 +69,7 @@ const ServicesPage = () => {
                 🎉 Book Now
               </motion.button>
               <motion.a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20help%20choosing%20a%20decoration%20service!"
+                href="https://wa.me/919553638221?text=Hi%2C%20I%20need%20help%20choosing%20a%20decoration%20service!"
                 target="_blank" rel="noopener noreferrer"
                 whileHover={{ scale:1.05 }} whileTap={{ scale:0.95 }}
                 className="px-8 py-3.5 rounded-full font-bold text-white shadow-xl"

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,7 +13,7 @@ import FloatingButtons from './components/FloatingButtons';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import GalleryPage from './pages/GalleryPage';
-import PricingPage from './pages/PricingPage';
+
 import BookingPage from './pages/BookingPage';
 import ContactPage from './pages/ContactPage';
 
@@ -34,7 +36,7 @@ function AppContent({ darkMode, toggleDarkMode }) {
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
+
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
@@ -48,6 +50,29 @@ function AppContent({ darkMode, toggleDarkMode }) {
 function App() {
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false, // keep false for native feel on mobile touch, or true to force smooth layout scrolling
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem('darkMode');

@@ -8,16 +8,16 @@ const contactInfo = [
   {
     icon: <FiPhone />,
     label: 'Phone / Call',
-    value: '+91 98765 43210',
-    href: 'tel:+919876543210',
+    value: '+91 95536 38221',
+    href: 'tel:+919553638221',
     color: 'from-pink-500 to-rose-600',
     emoji: '📞',
   },
   {
     icon: null,
     label: 'WhatsApp',
-    value: '+91 98765 43210',
-    href: 'https://wa.me/919876543210',
+    value: '+91 95536 38221',
+    href: 'https://wa.me/919553638221',
     color: 'from-green-500 to-teal-600',
     emoji: '💬',
   },
@@ -32,15 +32,15 @@ const contactInfo = [
   {
     icon: <FiMapPin />,
     label: 'Location',
-    value: 'Hyderabad, Telangana',
-    href: 'https://maps.google.com/?q=Hyderabad,Telangana',
+    value: 'Hosanna Church Road, Nellore 524003, AP',
+    href: 'https://maps.google.com/?q=Hosanna+Church+Road,Nellore+524003,AP,India',
     color: 'from-yellow-500 to-amber-600',
     emoji: '📍',
   },
   {
     icon: <FiClock />,
     label: 'Working Hours',
-    value: 'Mon – Sun: 9 AM – 9 PM',
+    value: 'Mon – Sun: Open 24 Hours',
     href: null,
     color: 'from-blue-500 to-indigo-600',
     emoji: '⏰',
@@ -58,7 +58,7 @@ const Contact = () => {
       return;
     }
     const encoded = encodeURIComponent(quickMsg);
-    window.open(`https://wa.me/919876543210?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/919553638221?text=${encoded}`, '_blank');
     toast.success('Opening WhatsApp...', { icon: '💬' });
     setQuickMsg('');
   };
@@ -185,14 +185,14 @@ const Contact = () => {
             className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 h-full min-h-[450px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.9040485267!2d78.24323089248898!3d17.412281011650835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61592.515904838016!2d79.94634065691065!3d14.45330889270928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8cb494f6c449%3A0xc37537dbb8a4f475!2sNellore%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '450px' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Chaitu Events Location - Hyderabad"
+              title="Chaitu Events Location - Nellore"
             />
           </motion.div>
         </div>

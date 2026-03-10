@@ -225,7 +225,7 @@ const Pricing = () => {
             Every event is unique! Contact us for a personalized quote tailored to your vision.
           </p>
           <a
-            href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20a%20custom%20decoration%20package%20for%20my%20event!"
+            href="https://wa.me/919553638221?text=Hi%2C%20I%20need%20a%20custom%20decoration%20package%20for%20my%20event!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-white shadow-lg"

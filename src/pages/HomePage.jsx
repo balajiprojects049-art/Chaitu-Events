@@ -6,6 +6,8 @@ import { FiLayers, FiGift, FiPhoneCall } from 'react-icons/fi';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import WhyUs from '../components/WhyUs';
+import HowItWorks from '../components/HowItWorks';
+import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 
 // Mini service preview for home
@@ -23,7 +25,7 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Chaitu Events – Premium Event Decorations & Surprise Planning</title>
-        <meta name="description" content="Chaitu Events – Premium balloon decorations, wedding decor, birthday surprise planning, engagement and housewarming decorations in Hyderabad." />
+        <meta name="description" content="Chaitu Events – Premium balloon decorations, wedding decor, birthday surprise planning, engagement and housewarming decorations in Nellore, Kavali, and Prakasam districts." />
       </Helmet>
 
       {/* Hero */}
@@ -94,11 +96,28 @@ const HomePage = () => {
       {/* Why Us */}
       <WhyUs />
 
+      {/* How It Works */}
+      <HowItWorks />
+
       {/* Testimonials */}
       <Testimonials />
 
+      {/* FAQ */}
+      <FAQ />
+
       {/* Final CTA */}
-      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#0f0a1e 0%,#1a0533 50%,#0f0a1e 100%)' }}>
+      <section className="py-20 relative overflow-hidden">
+        {/* Background Image (Fixed scroll effect) */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+          style={{ backgroundImage: "url('/birthday_decor.png')" }}
+        >
+          {/* Mirror Transparent / Glassmorphism */}
+          <div className="absolute inset-0 bg-black/40" />
+          {/* Colour tint overlay for brand feel */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/10 mix-blend-overlay" />
+        </div>
+
         <div className="absolute inset-0 pointer-events-none">
           {[['#f43f5e','15%','30%'],['#7c3aed','75%','20%'],['#f59e0b','50%','70%']].map(([c,x,y],i)=>(
             <motion.div key={i} className="absolute rounded-full blur-3xl opacity-15"

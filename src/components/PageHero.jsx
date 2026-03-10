@@ -11,8 +11,10 @@ const PageHero = ({ emoji, title, highlight, subtitle, bgImage }) => (
     {bgImage ? (
       <>
         <img src={bgImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/50 via-transparent to-pink-950/40" />
+        {/* Dark overlay for text readability (Mirror Transparent / Glassmorphism) */}
+        <div className="absolute inset-0 bg-black/40" />
+        {/* Colour tint overlay for brand feel */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/10 mix-blend-overlay" />
       </>
     ) : (
       <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-purple-950 to-gray-950" />
@@ -33,10 +35,6 @@ const PageHero = ({ emoji, title, highlight, subtitle, bgImage }) => (
     }}/>
 
     <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-      <motion.div initial={{ opacity:0, scale:0.5 }} animate={{ opacity:1, scale:1 }} transition={{ type:'spring', stiffness:200 }}
-        className="text-5xl mb-4"
-      >{emoji}</motion.div>
-
       <motion.h1
         initial={{ opacity:0, y:30 }}
         animate={{ opacity:1, y:0 }}

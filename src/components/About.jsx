@@ -130,7 +130,7 @@ const About = () => {
             {/* CTA */}
             <div className="flex items-center gap-4">
               <motion.a
-                href="tel:+919876543210"
+                href="tel:+919553638221"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white shadow-lg cursor-pointer"

@@ -26,7 +26,7 @@ const BookingPage = () => {
     setSubmitting(true);
     const msg = `Hi Chaitu Events! 🎉%0A%0A*Booking Request*%0A----%0A👤 Name: ${form.name}%0A📞 Phone: ${form.phone}%0A📧 Email: ${form.email}%0A🎪 Event: ${form.eventType}%0A📅 Date: ${form.date}%0A📍 Venue: ${form.venue}%0A👥 Guests: ${form.guests}%0A💰 Budget: ${form.budget}%0A📝 Notes: ${form.message}%0A%0APlease confirm availability!`;
     setTimeout(() => {
-      window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+      window.open(`https://wa.me/919553638221?text=${msg}`, '_blank');
       toast.success('Opening WhatsApp with your booking details! 🎉');
       setSubmitting(false);
     }, 800);
@@ -61,9 +61,9 @@ const BookingPage = () => {
                 {[
                   ['🎨','Custom Themes','We design as per your vision'],
                   ['⏰','On-Time Setup','Always ready before guests arrive'],
-                  ['💬','WhatsApp Support','Reach us any time, 9 AM–9 PM'],
+                  ['💬','WhatsApp Support','Reach us 24/7'],
                   ['💰','Best Prices','Premium quality, honest pricing'],
-                  ['✅','Trusted by 500+','Families across Hyderabad'],
+                  ['✅','Trusted by 500+','Families across Nellore, Kavali & Prakasam'],
                 ].map(([icon,title,desc],i)=>(
                   <div key={i} className="flex gap-3 mb-4">
                     <span className="text-2xl flex-shrink-0">{icon}</span>
@@ -80,8 +80,8 @@ const BookingPage = () => {
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">📞 Direct Contact</h3>
                 <div className="space-y-3">
                   {[
-                    ['📱','+91 98765 43210','tel:+919876543210'],
-                    ['💬','Chat on WhatsApp','https://wa.me/919876543210'],
+                    ['📱','+91 95536 38221','tel:+919553638221'],
+                    ['💬','Chat on WhatsApp','https://wa.me/919553638221'],
                     ['📧','chaituevents@gmail.com','mailto:chaituevents@gmail.com'],
                   ].map(([icon,text,href],i)=>(
                     <a key={i} href={href} target={href.startsWith('http')?'_blank':undefined} rel="noopener noreferrer"

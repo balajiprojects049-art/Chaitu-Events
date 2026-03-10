@@ -45,22 +45,25 @@ const Booking = () => {
 
     // Compose WhatsApp message
     const message = encodeURIComponent(
-      `🎉 *New Booking Request - Chaitu Events*\n\n` +
-      `👤 *Name:* ${form.name}\n` +
-      `📞 *Phone:* ${form.phone}\n` +
-      `🎊 *Event Type:* ${form.eventType}\n` +
-      `📅 *Event Date:* ${form.eventDate}\n` +
-      `📍 *Location:* ${form.location || 'Not specified'}\n` +
-      `👥 *Guest Count:* ${form.guestCount || 'Not specified'}\n` +
-      `💰 *Budget:* ${form.budget || 'Flexible'}\n` +
-      `💬 *Message:* ${form.message || 'No additional message'}`
+      `🎉 *Chaitu Events - New Booking Request*\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `👤 *Name:*         ${form.name}\n` +
+      `📞 *Phone:*        ${form.phone}\n` +
+      `🎊 *Event Type:*   ${form.eventType}\n` +
+      `📅 *Date:*          ${form.eventDate}\n` +
+      `📍 *Location:*     ${form.location || 'Not specified'}\n` +
+      `👥 *Guests:*       ${form.guestCount || 'Not specified'}\n` +
+      `💰 *Budget:*       ${form.budget || 'Flexible'}\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `💬 *Message/Requirements:*\n` +
+      `${form.message || 'No additional requirements provided.'}`
     );
 
     // Simulate API call delay then open WhatsApp
     setTimeout(() => {
       setLoading(false);
       toast.success('Booking request sent! We\'ll contact you shortly.', { icon: '🎉' });
-      window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+      window.open(`https://wa.me/919553638221?text=${message}`, '_blank');
       setForm(initialForm);
     }, 1000);
   };
@@ -150,7 +153,7 @@ const Booking = () => {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 95536 38221"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
                 />
@@ -275,7 +278,7 @@ const Booking = () => {
               </motion.button>
 
               <motion.a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20event%21"
+                href="https://wa.me/919553638221?text=Hi%2C%20I%20want%20to%20book%20an%20event%21"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

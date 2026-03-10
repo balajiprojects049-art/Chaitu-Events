@@ -82,10 +82,10 @@ const Hero = () => {
           className={`w-full h-full object-cover transition-opacity duration-1000 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
           onLoad={() => setImgLoaded(true)}
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        {/* Dark overlay for text readability (Mirror Transparent / Glassmorphism) */}
+        <div className="absolute inset-0 bg-black/40" />
         {/* Colour tint overlay for brand feel */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/50 via-transparent to-pink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/10 mix-blend-overlay" />
       </div>
 
       {/* Fallback gradient while image loads */}
