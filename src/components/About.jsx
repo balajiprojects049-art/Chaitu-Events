@@ -141,7 +141,7 @@ const About = () => {
               </motion.a>
               <div className="text-sm text-gray-500 dark:text-gray-400">
                 <p className="font-semibold text-gray-700 dark:text-gray-300">Mon–Sun</p>
-                <p>9 AM – 9 PM</p>
+                <p>Open 24 Hours</p>
               </div>
             </div>
           </motion.div>
