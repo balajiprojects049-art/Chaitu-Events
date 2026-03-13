@@ -24,8 +24,53 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Chaitu Events – Premium Event Decorations & Surprise Planning</title>
-        <meta name="description" content="Chaitu Events – Premium balloon decorations, wedding decor, birthday surprise planning, engagement and housewarming decorations in Nellore, Kavali, and Prakasam districts." />
+        <title>Best Event Decoration in Nellore & Prakasam | Chaitu Events</title>
+        <meta name="description" content="Chaitu Events offers premium balloon decoration, wedding decor, and birthday surprise planning in Nellore, Prakasam, Ongole, and across Andhra Pradesh. Book the best decorators today!" />
+        <meta name="keywords" content="Balloon Decoration Nellore, Birthday Decoration Prakasam, Event Planner Andhra Pradesh, Wedding Decoration Nellore, Party Decorators Ongole, Chaitu Events" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Chaitu Events",
+              "image": "https://chaituevents.com/hero_bg.png",
+              "@id": "https://chaituevents.com",
+              "url": "https://chaituevents.com",
+              "telephone": "+919553638221",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Hosanna Church Road",
+                "addressLocality": "Nellore",
+                "postalCode": "524003",
+                "addressCountry": "IN",
+                "addressRegion": "Andhra Pradesh"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 14.4426,
+                "longitude": 79.9865
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              },
+              "sameAs": [
+                "https://www.facebook.com/chaituevents",
+                "https://www.instagram.com/chaituevents"
+              ]
+            }
+          `}
+        </script>
       </Helmet>
 
       {/* Hero */}
@@ -54,7 +99,7 @@ const HomePage = () => {
               </span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
-              A taste of what we create — see all 8 services on our dedicated Services page.
+              Expert decoration services in Nellore, Kavali, and across Andhra Pradesh.
             </p>
           </motion.div>
 
@@ -96,11 +141,60 @@ const HomePage = () => {
       {/* Why Us */}
       <WhyUs />
 
+      {/* Areas We Serve - NEW SEO SECTION */}
+      <section className="py-20 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Areas We Serve Across Andhra Pradesh
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+              Providing premium decoration services in major districts and towns including Nellore and Prakasam.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {['Nellore', 'Ongole', 'Kavali', 'Gudur', 'Chirala', 'Vijayawada', 'Guntur', 'Tirupati', 'Naidupeta', 'Kandukur', 'Markapur', 'Andhra Pradesh'].map((city, idx) => (
+              <div key={idx} className="p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 text-center font-medium text-gray-700 dark:text-gray-300">
+                {city}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <HowItWorks />
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Detailed SEO Content Section - NEW */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose dark:prose-invert">
+          <h2 className="font-display text-center text-gray-900 dark:text-white mb-8">Premium Event Decoration Services in Andhra Pradesh</h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            Welcome to <strong>Chaitu Events</strong>, your premier partner for exquisite event decoration and seamless event planning in Andhra Pradesh. Based in the heart of <strong>Nellore District</strong> and extending our creative touch across <strong>Prakasam District</strong>, we specialize in turning ordinary venues into extraordinary experiences.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400">
+            Whether you are looking for the <strong>best balloon decoration in Nellore</strong> or sophisticated <strong>wedding decoration in Andhra Pradesh</strong>, our team is equipped to bring your vision to life. From whimsical arches for birthdays to grand flower arrangements for traditional Telugu weddings, we handle every detail with precision.
+          </p>
+          
+          <h3 className="text-gray-900 dark:text-white mt-8">Expert Balloon Decoration in Nellore District</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            Searching for "balloon decorators near me" in Nellore? Chaitu Events offers custom-themed balloon setups that add a pop of joy to any occasion. We specialize in organic balloon arches, helium bouquets, and backdrop installations in <strong>Kavali, Gudur, and Naidupeta</strong>.
+          </p>
+
+          <h3 className="text-gray-900 dark:text-white mt-8">Wedding & Engagement Decorators in Prakasam</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            Our <strong>event planners in Prakasam District</strong> are experts at creating luxurious wedding stages and reception decors. We serve <strong>Ongole, Chirala, and Kandukur</strong>, providing everything from traditional flower work to modern crystal lighting. Chaitu Events is trusted by hundreds of families for its reliable service and premium aesthetics.
+          </p>
+
+          <h3 className="text-gray-900 dark:text-white mt-8">Surprise Planning & Party Decor</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            Make your loved ones feel special with our <strong>surprise event planning in Andhra Pradesh</strong>. We curate romantic rooftop dinners, homecoming surprises, and intimate birthday setups right at your doorstep. No matter the scale—be it a small housewarming or a grand corporate launch—Chaitu Events is the top-rated <strong>event decoration service in Nellore and Prakasam</strong>.
+          </p>
+        </div>
+      </section>
 
       {/* FAQ */}
       <FAQ />
@@ -136,7 +230,7 @@ const HomePage = () => {
               Dream Event?
             </span>
           </h2>
-          <p className="text-gray-400 text-lg mb-8">Fill in our easy booking form and we'll get back to you within 2 hours!</p>
+          <p className="text-gray-400 text-lg mb-8">Contact the best event planners in Andhra Pradesh today!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               onClick={() => navigate('/booking')}

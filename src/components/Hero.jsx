@@ -11,7 +11,7 @@ import {
   FiZap,
 } from 'react-icons/fi';
 
-const HERO_WORDS = ['Unforgettable', 'Spectacular', 'Extraordinary'];
+const HERO_WORDS = ['Best Balloon', 'Creative', 'Magical', 'Spectacular'];
 
 const PARTICLES = [...Array(20)].map((_, i) => ({
   id: i,
@@ -154,8 +154,8 @@ const Hero = () => {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-4 leading-[1.05] tracking-tight"
           style={{ textShadow: '0 4px 30px rgba(0,0,0,0.6)' }}
         >
-          Make Your<br />
-          Celebrations{' '}
+          Best Event &<br />
+          Balloon{' '}
           <span className="relative inline-grid align-baseline">
             {/* Invisible longest word to define the fixed layout width so it NEVER jumps */}
             <span className="col-start-1 row-start-1 opacity-0 pointer-events-none">
@@ -170,9 +170,12 @@ const Hero = () => {
               }}
               aria-label={typed || HERO_WORDS[wordIdx]}
             >
-              {typed || '\u00A0'}
+              {(typed || '\u00A0')}
             </span>
+            <div className="absolute -bottom-4 left-0 w-full h-1.5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur-sm opacity-50" />
           </span>
+          <br />
+          <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl opacity-90">Decorations</span>
         </motion.h1>
 
         {/* Subtext */}
@@ -183,9 +186,8 @@ const Hero = () => {
           className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed"
           style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
         >
-          Premium Balloon Decorations, Surprise Events & Wedding Decorations — 
-          We transform your special moments into{' '}
-          <span className="text-yellow-400 font-semibold">magical memories</span>
+          Premium Balloon Decoration, Surprise Events & Wedding Decorations in <span className="text-white font-bold">Nellore, Prakasam, and across Andhra Pradesh.</span> We transform your special moments into{' '}
+          <span className="text-yellow-400 font-semibold">magical memories</span>.
         </motion.p>
 
         {/* CTA Buttons */}

@@ -70,8 +70,9 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us – Chaitu Events | Get In Touch</title>
-        <meta name="description" content="Contact Chaitu Events — call, WhatsApp, or email us. We are open 24 hours to serve your event decoration needs in Nellore, Kavali, and Prakasam." />
+        <title>Contact Chaitu Events | Best Decorators in Nellore & Prakasam</title>
+        <meta name="description" content="Contact Chaitu Events for best balloon decoration in Nellore and wedding decor in Prakasam. Call +91 95536 38221 or visit us in Nellore, Andhra Pradesh." />
+        <meta name="keywords" content="Contact Decorators Nellore, Event Planner Phone Prakasam, Chaitu Events Address, Best Decorators Andhra Pradesh" />
       </Helmet>
 
       <PageHero

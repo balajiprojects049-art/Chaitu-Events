@@ -37,8 +37,9 @@ const BookingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Book Now – Chaitu Events | Event Decoration Booking</title>
-        <meta name="description" content="Book your premium event decoration with Chaitu Events. Fill our quick form and get a WhatsApp confirmation within 2 hours." />
+        <title>Book Event Decoration | Chaitu Events | Nellore & Prakasam</title>
+        <meta name="description" content="Book the best balloon decoration in Nellore and wedding decor in Prakasam. Fast confirmation via WhatsApp. Trusted event planners in Andhra Pradesh." />
+        <meta name="keywords" content="Book Decorators Nellore, Wedding Decoration Booking Ongole, Event Planner Andhra Pradesh, Chaitu Events Booking" />
       </Helmet>
 
       <PageHero

@@ -65,8 +65,9 @@ const PricingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Pricing – Chaitu Events | Affordable Premium Decoration Packages</title>
-        <meta name="description" content="Transparent pricing for all decoration packages — Silver, Gold & Platinum. Start from ₹3,999. Book online instantly." />
+        <title>Pricing Packages | Chaitu Events | Affordable Decor Nellore</title>
+        <meta name="description" content="Transparent pricing for balloon decoration in Nellore and wedding decor in Prakasam. Packages start from ₹3,999. Best rates in Andhra Pradesh." />
+        <meta name="keywords" content="Decoration Price Nellore, Wedding Decor Cost Prakasam, Birthday Decoration Packages AP, Chaitu Events Pricing" />
       </Helmet>
 
       <PageHero

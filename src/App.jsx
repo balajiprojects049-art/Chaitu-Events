@@ -12,6 +12,7 @@ import FloatingButtons from './components/FloatingButtons';
 // Pages
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import GalleryPage from './pages/GalleryPage';
 
 import BookingPage from './pages/BookingPage';
@@ -35,6 +36,7 @@ function AppContent({ darkMode, toggleDarkMode }) {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
 
           <Route path="/booking" element={<BookingPage />} />

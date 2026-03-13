@@ -11,8 +11,9 @@ const GalleryPage = () => {
   return (
     <>
       <Helmet>
-        <title>Gallery – Chaitu Events | Event Decoration Portfolio</title>
-        <meta name="description" content="Browse our portfolio of stunning event decorations – balloons, flowers, wedding mandaps, lighting setups, birthday parties and more." />
+        <title>Decoration Gallery | Chaitu Events | Best Event Portfolio Nellore</title>
+        <meta name="description" content="Browse Chaitu Events portfolio: Best balloon decoration in Nellore, wedding decor in Prakasam, and surprise events across Andhra Pradesh. Real photos of our work." />
+        <meta name="keywords" content="Event Gallery Nellore, Decoration Photos Ongole, Wedding Decor Portfolio AP, Chaitu Events Gallery" />
       </Helmet>
 
       <PageHero

@@ -11,8 +11,9 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services – Chaitu Events | Premium Event Decorations</title>
-        <meta name="description" content="Explore all 8 premium decoration services by Chaitu Events: Birthday, Wedding, Engagement, Housewarming, Surprise, Flower, Lighting & Romantic setups." />
+        <title>Our Services | Balloon & Wedding Decoration in Andhra Pradesh</title>
+        <meta name="description" content="Explore Chaitu Events premium services: Balloon decoration in Nellore, wedding decor in Prakasam, surprise planning, and housewarming in Andhra Pradesh." />
+        <meta name="keywords" content="Balloon Decoration Nellore, Wedding Decorators Prakasam, Event Planning Andhra Pradesh, Birthday Decoration Kavali" />
       </Helmet>
 
       <PageHero

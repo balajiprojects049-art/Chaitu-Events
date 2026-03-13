@@ -4,24 +4,34 @@ import { Link } from 'react-router-dom';
 
 const footerLinks = [
   {
-    title: 'Quick Links',
+    title: 'Company',
     links: [
       { name: 'Home', to: '/' },
-      { name: 'Services', to: '/services' },
-      { name: 'Gallery', to: '/gallery' },
-      { name: 'Pricing', to: '/pricing' },
-      { name: 'Booking', to: '/booking' },
-      { name: 'Contact', to: '/contact' },
+      { name: 'About Us', to: '/#about' },
+      { name: 'Our Gallery', to: '/gallery' },
+      { name: 'Latest Projects', to: '/gallery' },
+      { name: 'Book Now', to: '/booking' },
+      { name: 'Contact Us', to: '/contact' },
     ],
   },
   {
-    title: 'Our Services',
+    title: 'Top Services',
     links: [
-      { name: 'Birthday Decorations', to: '/services' },
-      { name: 'Wedding Decorations', to: '/services' },
-      { name: 'Engagement Setup', to: '/services' },
-      { name: 'Surprise Events', to: '/services' },
-      { name: 'Flower Decorations', to: '/services' },
+      { name: 'Birthday Decoration Nellore', to: '/services/birthday-balloon-decoration-nellore' },
+      { name: 'Wedding Decor Prakasam', to: '/services/wedding-decoration-prakasam' },
+      { name: 'Surprise Planning AP', to: '/services/surprise-event-planner-andhra-pradesh' },
+      { name: 'Balloon Decoration Ongole', to: '/services/balloon-decoration-ongole' },
+      { name: 'Birthday Decor Kavali', to: '/services/birthday-decoration-kavali' },
+    ],
+  },
+  {
+    title: 'Areas We Serve',
+    links: [
+      { name: 'Nellore District', to: '/' },
+      { name: 'Prakasam District', to: '/' },
+      { name: 'Ongole City', to: '/' },
+      { name: 'Kavali Town', to: '/' },
+      { name: 'Gudur & Chirala', to: '/' },
     ],
   },
 ];
@@ -61,7 +71,7 @@ const Footer = () => {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-pink-900/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="pt-16 pb-12 grid md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-white/10">
+        <div className="pt-16 pb-12 grid md:grid-cols-2 lg:grid-cols-5 gap-10 border-b border-white/10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">

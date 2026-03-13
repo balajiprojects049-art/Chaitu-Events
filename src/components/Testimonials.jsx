@@ -11,7 +11,7 @@ const testimonials = [
     location: 'Nellore',
     avatar: '👩',
     rating: 5,
-    review: "Chaitu Events made my daughter's birthday unforgettable! The balloon arch was absolutely stunning, and they completed the setup 2 hours before the party. Every guest was amazed! Will definitely book again.",
+    review: "Chaitu Events provided the best balloon decoration in Nellore for my daughter's birthday! Punctual, creative, and very professional. Highly recommended for any event in Nellore district.",
     event: 'Birthday Party',
     color: 'from-pink-400 to-rose-500',
   },
@@ -19,10 +19,10 @@ const testimonials = [
     id: 2,
     name: 'Ravi Kumar',
     role: 'Wedding Client',
-    location: 'Nellore',
+    location: 'Ongole',
     avatar: '👨',
     rating: 5,
-    review: "Amazing balloon decorations and perfect lighting! Our wedding reception looked like something out of a fairy tale. The team was professional, punctual, and so creative. Best decision we made for our wedding!",
+    review: "Stunning wedding decoration in Ongole! The stage setup and lighting were world-class. Chaitu Events is definitely the best event planner in Prakasam district.",
     event: 'Wedding Reception',
     color: 'from-purple-400 to-violet-500',
   },
@@ -33,7 +33,7 @@ const testimonials = [
     location: 'Kavali',
     avatar: '👩‍🦰',
     rating: 5,
-    review: "Best surprise planners in the city! They kept everything secret from my husband and the reveal was perfect. The rose petal path, candles, and balloon ceiling looked breathtakingly beautiful. 10/10!",
+    review: "Top-notch surprise event planning in Kavali. They managed the decor and the surprise elements perfectly. The best decorators in Andhra Pradesh for creative setups!",
     event: 'Romantic Surprise',
     color: 'from-yellow-400 to-amber-500',
   },
@@ -41,23 +41,12 @@ const testimonials = [
     id: 4,
     name: 'Karthik Naidu',
     role: 'Engagement Client',
-    location: 'Ongole',
+    location: 'Gudur',
     avatar: '👨‍💼',
     rating: 5,
-    review: "The engagement decoration exceeded all our expectations! The floral backdrop, LED lighting, and overall setup was just gorgeous. Our families were absolutely thrilled. Thank you Chaitu Events team!",
+    review: "Excellent engagement decoration in Gudur. The floral work and balloon arches were elegant. The team handled every detail with precision. Very happy with Chaitu Events.",
     event: 'Engagement Ceremony',
     color: 'from-green-400 to-teal-500',
-  },
-  {
-    id: 5,
-    name: 'Meena Patel',
-    role: 'Housewarming Client',
-    location: 'Nellore',
-    avatar: '👩‍💼',
-    rating: 5,
-    review: "We hired Chaitu Events for our housewarming and they truly made it special. The fresh flower arrangements, colorful balloons, and welcoming decor made everyone feel the warmth. Highly recommend!",
-    event: 'Housewarming',
-    color: 'from-indigo-400 to-blue-500',
   },
 ];
 
@@ -76,7 +65,7 @@ const StarRating = ({ rating }) => (
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   const handlePrev = () => {
     setDirection(-1);
@@ -124,7 +113,7 @@ const Testimonials = () => {
               </span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-              Real stories from real families whose celebrations we helped make magical.
+              Real stories from real families in Nellore and Prakasam whose celebrations we helped make magical.
             </p>
           </motion.div>
         </div>
@@ -144,12 +133,10 @@ const Testimonials = () => {
                 className="w-full"
               >
                 <div className="testimonial-card rounded-3xl p-8 md:p-12 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl relative">
-                  {/* Quote Icon */}
                   <div className="absolute top-6 right-8 text-6xl text-gray-100 dark:text-gray-800 font-serif select-none">
                     "
                   </div>
 
-                  {/* Top Badge */}
                   <div className="flex items-center justify-between mb-6">
                     <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r ${t.color} text-white text-xs font-semibold`}>
                       <span>🎉</span> {t.event}
@@ -157,12 +144,10 @@ const Testimonials = () => {
                     <StarRating rating={t.rating} />
                   </div>
 
-                  {/* Review Text */}
                   <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8 italic relative z-10">
                     "{t.review}"
                   </p>
 
-                  {/* Reviewer */}
                   <div className="flex items-center gap-4">
                     <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-2xl shadow-md`}>
                       {t.avatar}
@@ -180,7 +165,6 @@ const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-center gap-4 mt-8">
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -191,7 +175,6 @@ const Testimonials = () => {
               <FiChevronLeft size={20} />
             </motion.button>
 
-            {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, i) => (
                 <button
@@ -217,24 +200,33 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Review CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.5 }}
-          className="grid grid-cols-3 gap-6 max-w-xl mx-auto mt-16 text-center"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.6 }}
+          className="mt-20 max-w-2xl mx-auto rounded-3xl p-8 text-center bg-white dark:bg-gray-900 border border-purple-100 dark:border-purple-800 shadow-xl"
         >
-          {[
-            { value: '500+', label: 'Happy Clients', icon: '😊' },
-            { value: '5.0⭐', label: 'Average Rating', icon: '⭐' },
-            { value: '100%', label: 'Satisfaction', icon: '💯' },
-          ].map((s, i) => (
-            <div key={i} className="p-4 rounded-2xl bg-white dark:bg-gray-900 shadow-md border border-gray-100 dark:border-gray-800">
-              <div className="text-2xl mb-1">{s.icon}</div>
-              <div className="font-bold text-xl text-gray-900 dark:text-white">{s.value}</div>
-              <div className="text-gray-500 text-xs">{s.label}</div>
-            </div>
-          ))}
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <FiStar key={i} size={28} className="text-yellow-400 fill-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
+            ))}
+          </div>
+          <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">Are You a Happy Client?</h3>
+          <p className="text-gray-500 dark:text-gray-400 mb-6 font-medium">
+            Help us reach more families in <span className="text-purple-600 dark:text-purple-400">Nellore, Ongole, and Kavali</span> by sharing your experience on Google.
+          </p>
+          <motion.a
+            href="https://g.page/chaituevents/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-bold text-white shadow-xl bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500"
+          >
+            <span>Review Us on Google</span>
+            <FiStar />
+          </motion.a>
         </motion.div>
       </div>
     </section>

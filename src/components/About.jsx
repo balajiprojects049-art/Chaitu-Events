@@ -101,11 +101,10 @@ const About = () => {
             </h2>
 
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-              Chaitu Events specializes in creating unforgettable celebrations with premium balloon 
-              decorations, elegant flower arrangements, creative surprise planning, and stunning lighting 
-              setups. Whether it's a birthday, wedding, engagement, or housewarming ceremony, we transform 
-              your special moments into{' '}
-              <span className="text-purple-600 dark:text-purple-400 font-semibold">magical memories</span>.
+              Chaitu Events specializes in creating unforgettable celebrations in <span className="text-purple-600 dark:text-purple-400 font-semibold">Nellore and Prakasam District</span> with premium balloon 
+              decoration, elegant flower arrangements, creative wedding decor, and stunning lighting 
+              setups. Whether it's a birthday in Ongole, a wedding in Nellore, or a surprise in Kavali, we transform 
+              your special moments into <span className="text-purple-600 dark:text-purple-400 font-semibold">magical memories</span> across Andhra Pradesh.
             </p>
 
             {/* Feature Grid */}

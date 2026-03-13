@@ -5,24 +5,28 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 
 const faqs = [
   {
-    q: 'How early should I book my event decoration?',
-    a: 'We recommend booking at least 1-2 weeks in advance to ensure availability, especially during peak wedding and festival seasons. However, we also try our best to accommodate last-minute bookings depending on our schedule.',
+    q: 'Who provides the best balloon decoration in Nellore?',
+    a: 'Chaitu Events is recognized as a leader for the best balloon decoration in Nellore and surrounding areas. We offer creative, theme-based balloon setups for birthdays, shop openings, and private events with premium quality and on-time execution.',
   },
   {
-    q: 'Can you create a custom theme for my party?',
-    a: 'Absolutely! We love bringing your unique ideas to life. Just share your inspiration, preferred colors, and references, and our creative team will design a custom setup tailored exactly for you.',
+    q: 'How early should I book my event decoration in Prakasam District?',
+    a: 'For major events in Prakasam District or Nellore, we recommend booking at least 1-2 weeks in advance. During peak wedding seasons, booking 1 month early ensures you get your preferred dates for wedding and engagement decorations.',
   },
   {
-    q: 'Do you charge extra for transportation?',
-    a: 'Transportation is usually included in our standard packages for locations within the city limits. For venues outside the city limits, a nominal travel fee may apply based on the distance.',
+    q: 'Do you offer surprise event planning across Andhra Pradesh?',
+    a: 'Yes! We are the top surprise event planners in Andhra Pradesh. We serve Nellore, Ongole, Kavali, and even major cities like Vijayawada and Guntur for romantic surprises, anniversaries, and homecoming events.',
   },
   {
-    q: 'How long does it take to set up the decorations?',
-    a: 'Setup time depends on the complexity of the design. Standard birthday balloon decorations usually take 1-2 hours, while larger wedding or engagement setups may take 4-6 hours. We will give you an exact time estimate when you book.',
+    q: 'What types of birthday decoration themes do you have in Kavali?',
+    a: 'We offer specialized birthday decoration in Kavali with themes like Jungle, Boss Baby, Cocomelon, and Princess. We can also customize any theme based on your vision and budget.',
   },
   {
-    q: 'Is a deposit required to confirm the booking?',
-    a: 'Yes, we require a 50% advance deposit to secure your date and begin sourcing materials for your specific theme. The remaining balance can be paid on the day of the event after the setup is complete.',
+    q: 'How long does it take to set up wedding decoration in Ongole?',
+    a: 'A standard wedding decoration in Ongole or Nellore typically takes 4-6 hours depending on the scale. Small party setups take about 1-2 hours. We always ensure the setup is completed well before the guests arrive.',
+  },
+  {
+    q: 'Is there a travel fee for decoration services in Gudur or Chirala?',
+    a: 'We serve all major towns like Gudur, Chirala, and Naidupeta. A nominal travel fee may be applicable depending on the distance from our main hubs, but we strive to keep our pricing affordable for all customers in AP.',
   },
 ];
 
